@@ -5,7 +5,7 @@ class _Label extends Text {
       : super(
           text,
           style: TextStyle(
-            color: isDark ? AppColors.whiteGrey.withOpacity(0.6) : AppColors.black.withOpacity(0.6),
+            color: isDark ? AppColors.whiteGrey.withValues(alpha: 0.6) : AppColors.black.withValues(alpha: 0.6),
             height: 0.8,
           ),
         );
@@ -111,7 +111,7 @@ class _PokemonAbout extends StatelessWidget {
         color: Theme.of(context).colorScheme.background,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.12),
+            color: Colors.black.withValues(alpha: 0.12),
             offset: const Offset(0, 8),
             blurRadius: 23,
           )

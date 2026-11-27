@@ -26,7 +26,7 @@ class GenerationCard extends StatelessWidget {
             BoxShadow(
               offset: const Offset(0, 8),
               blurRadius: 15,
-              color: AppColors.black.withOpacity(0.12),
+              color: AppColors.black.withValues(alpha: 0.12),
             ),
           ],
         ),
@@ -70,7 +70,7 @@ class GenerationCard extends StatelessWidget {
                 image: AppImages.pokeball,
                 width: height * 0.754,
                 height: height * 0.754,
-                color: AppColors.black.withOpacity(0.05),
+                color: AppColors.black.withValues(alpha: 0.05),
               ),
             ),
           ],

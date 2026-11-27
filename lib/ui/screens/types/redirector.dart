@@ -35,7 +35,7 @@ class Redirection extends StatelessWidget {
                       image: AppImages.pokeball,
                       width: 30,
                       height: 30,
-                      color: types[index].color.withOpacity(0.5),
+                      color: types[index].color.withValues(alpha: 0.5),
                     ),
                   ),
                   Padding(
@@ -50,7 +50,7 @@ class Redirection extends StatelessWidget {
                 child: Icon(
                   Icons.arrow_forward_ios,
                   size: 20,
-                  color: AppColors.black.withOpacity(0.5),
+                  color: AppColors.black.withValues(alpha: 0.5),
                 ),
               )
             ],

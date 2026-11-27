@@ -43,7 +43,7 @@ class PokeballBackground extends StatelessWidget {
               image: AppImages.pokeball,
               width: pokeballSize,
               height: pokeballSize,
-              color: !isDark ? AppColors.whiteGrey : Colors.black.withOpacity(0.05),
+              color: !isDark ? AppColors.whiteGrey : Colors.black.withValues(alpha: 0.05),
             ),
           ),
           child,

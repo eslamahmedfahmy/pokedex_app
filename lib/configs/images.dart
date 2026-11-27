@@ -18,14 +18,23 @@ class AppImages {
   static const pikloader = _Image('pika_loader.gif');
 
   static Future precacheAssets(BuildContext context) async {
+    if (!context.mounted) return;
     await precacheImage(bulbasaur, context);
+    if (!context.mounted) return;
     await precacheImage(charmander, context);
+    if (!context.mounted) return;
     await precacheImage(squirtle, context);
+    if (!context.mounted) return;
     await precacheImage(pokeball, context);
+    if (!context.mounted) return;
     await precacheImage(male, context);
+    if (!context.mounted) return;
     await precacheImage(female, context);
+    if (!context.mounted) return;
     await precacheImage(dotted, context);
+    if (!context.mounted) return;
     await precacheImage(thumbnail, context);
+    if (!context.mounted) return;
     await precacheImage(pikloader, context);
   }
 }
