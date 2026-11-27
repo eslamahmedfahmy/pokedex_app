@@ -53,7 +53,7 @@ class CategoryCard extends StatelessWidget {
       left: -height * 0.53,
       child: CircleAvatar(
         radius: (height * 1.03) / 2,
-        backgroundColor: Colors.white.withOpacity(0.14),
+        backgroundColor: Colors.white.withValues(alpha: 0.14),
       ),
     );
   }
@@ -66,7 +66,7 @@ class CategoryCard extends StatelessWidget {
         image: AppImages.pokeball,
         width: height * 1.388,
         height: height * 1.388,
-        color: Colors.white.withOpacity(0.14),
+        color: Colors.white.withValues(alpha: 0.14),
       ),
     );
   }

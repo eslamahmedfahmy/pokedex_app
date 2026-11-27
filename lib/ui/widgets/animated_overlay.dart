@@ -24,7 +24,7 @@ class AnimatedOverlay extends AnimatedWidget {
           child: InkWell(
             onTap: onPress,
             child: Container(
-              color: color.withOpacity(animation.value * 0.5),
+              color: color.withValues(alpha: animation.value * 0.5),
             ),
           ),
         ),

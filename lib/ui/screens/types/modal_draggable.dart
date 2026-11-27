@@ -33,7 +33,7 @@ class ModalDraggable extends StatelessWidget {
                     image: AppImages.pokeball,
                     width: width / 2,
                     height: width / 2,
-                    color: AppColors.black.withOpacity(0.1),
+                    color: AppColors.black.withValues(alpha: 0.1),
                   ),
                 ),
                 ModalContents(index: index, width: width, scroller: s), //type_listview

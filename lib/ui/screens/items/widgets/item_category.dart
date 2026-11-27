@@ -23,14 +23,14 @@ class ItemCategory extends StatelessWidget {
           ),
           decoration: ShapeDecoration(
             shape: const StadiumBorder(),
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: 0.2),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Text(
                 name,
-                textScaleFactor: 1,
+                textScaler: TextScaler.noScaling,
                 style: const TextStyle(
                   fontSize: 10,
                   height: 0.8,
