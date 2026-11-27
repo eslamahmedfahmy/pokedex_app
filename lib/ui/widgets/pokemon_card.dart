@@ -28,7 +28,7 @@ class PokemonCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: pokemon.color.withOpacity(0.4),
+                color: pokemon.color.withValues(alpha: 0.4),
                 blurRadius: 15,
                 offset: const Offset(0, 8),
               ),
@@ -68,7 +68,7 @@ class PokemonCard extends StatelessWidget {
         image: AppImages.pokeball,
         width: pokeballSize,
         height: pokeballSize,
-        color: Colors.white.withOpacity(0.14),
+        color: Colors.white.withValues(alpha: 0.14),
       ),
     );
   }

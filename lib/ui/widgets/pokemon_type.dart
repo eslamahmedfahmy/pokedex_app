@@ -28,14 +28,14 @@ class PokemonType extends StatelessWidget {
         ),
         decoration: ShapeDecoration(
           shape: const StadiumBorder(),
-          color: (colored ? type.color : bgColor).withOpacity(0.2),
+          color: (colored ? type.color : bgColor).withValues(alpha: 0.2),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
               type.value,
-              textScaleFactor: 1,
+              textScaler: TextScaler.noScaling,
               style: TextStyle(
                   fontSize: large ? 12 : 8,
                   height: 0.8,
@@ -46,7 +46,7 @@ class PokemonType extends StatelessWidget {
             const HSpacer(5),
             Text(
               extra,
-              textScaleFactor: 1,
+              textScaler: TextScaler.noScaling,
               style: TextStyle(
                 fontSize: large ? 12 : 8,
                 height: 0.8,

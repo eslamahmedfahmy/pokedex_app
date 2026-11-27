@@ -34,7 +34,7 @@ class ItemCard extends StatelessWidget {
         image: AppImages.pokeball,
         width: pokeballSize,
         height: pokeballSize,
-        color: Colors.white.withOpacity(0.14),
+        color: Colors.white.withValues(alpha: 0.14),
       ),
     );
   }
@@ -96,7 +96,7 @@ class ItemCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: AppColors.grey.withOpacity(0.12),
+                color: AppColors.grey.withValues(alpha: 0.12),
                 blurRadius: 30,
                 offset: const Offset(0, 8),
               ),
