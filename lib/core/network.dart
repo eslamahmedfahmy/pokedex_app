@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:dio_http_cache/dio_http_cache.dart';
+import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
 import 'package:pokedex/core/utils.dart';
 
 class NetworkManager {
@@ -10,10 +10,13 @@ class NetworkManager {
   factory NetworkManager() {
     final dio = Dio();
 
-    dio.interceptors.add(DioCacheManager(CacheConfig(
-      defaultMaxAge: const Duration(days: 10),
-      maxMemoryCacheCount: 3,
-    )).interceptor);
+    dio.interceptors.add(DioCacheInterceptor(
+      options: CacheOptions(
+        store: MemCacheStore(maxSize: 10 * 1024 * 1024, maxEntrySize: 5 * 1024 * 1024),
+        policy: CachePolicy.forceCache,
+        maxStale: const Duration(days: 10),
+      ),
+    ));
 
     return NetworkManager._(dio);
   }
