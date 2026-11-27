@@ -4,7 +4,15 @@ An animated Pokedex built with Flutter and Clean Architecture. Browse Pokemon by
 
 ## Screenshots
 
-(Reuse existing files in `screenshots/`: home, home-news, pokedex, pokedex-fab, pokedex-fab-generation, pokemon-info-about, pokemon-info-base-stats, pokemon-info-evolution, pokemon-info-expanded.)
+| Home | Pokedex |
+| --- | --- |
+| <img src="screenshots/web-home.png" width="260"> | <img src="screenshots/web-pokedex.png" width="260"> |
+
+Home and Pokedex are from the current build (web build at phone size). More screens:
+
+| Generation filter | Pokemon info | Base stats | Evolution |
+| --- | --- | --- | --- |
+| <img src="screenshots/pokedex-fab-generation.png" width="170"> | <img src="screenshots/pokemon-info-about.png" width="170"> | <img src="screenshots/pokemon-info-base-stats.png" width="170"> | <img src="screenshots/pokemon-info-evolution.png" width="170"> |
 
 ## Features
 
@@ -12,6 +20,7 @@ An animated Pokedex built with Flutter and Clean Architecture. Browse Pokemon by
 - Detail screen with About, Base Stats and Evolution tabs
 - Sliding-up info panel and many custom animations
 - News feed on the home screen
+- Light and dark theme toggle
 - Cached network data for fast reloads and offline use
 - Responsive web frame support
 
@@ -21,8 +30,8 @@ An animated Pokedex built with Flutter and Clean Architecture. Browse Pokemon by
 | --- | --- |
 | Framework | Flutter, Dart |
 | Architecture | Clean Architecture: `data` / `domain` / `ui` layers |
-| State management | Bloc, `states/` |
-| Networking | Dio with `dio_http_cache` |
+| State management | Bloc (`flutter_bloc`), in `states/` |
+| Networking | Dio with `dio_cache_interceptor` |
 | Local storage | Hive |
 | UI | sliding_up_panel, cached_network_image, flutter_web_frame |
 
@@ -51,7 +60,7 @@ flutter run
 
 ## Credits
 
-Pokemon data and artwork belong to their owners. (TODO: add data source/API name and any licence the project must credit, since the original repo carried Apache/MIT badges.)
+Based on the open-source Flutter Pokedex by Pham Sy Hung (MIT License, see [LICENSE](LICENSE)). The Pokemon list and item data are loaded from the author's public GitHub gists. Pokemon names and artwork belong to their owners.
 
 ## Author
 
